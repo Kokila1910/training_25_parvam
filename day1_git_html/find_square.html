@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Square</title>
+    </head>
+    <style>
+.number{
+    margin-top: 50px;
+}
+.result{
+    margin-top: 20px;
+}
+    </style>
+    <body>
+        
+            <div class="number mt-5">
+            <label for="number">Number</label>
+            <input type=text id="numberinput" placeholder="Enter a number">
+            <div class=result></div>
+            <label for="result">Result</label>
+            <input type=text id="resultoutput">
+        </div>
+        <p><button onclick="calculatesqaure()">square</button> </p>
+            </div>
+        <script>
+            function calculatesqaure(){
+                var input=document.getElementById("numberinput").value;
+                var number= parseFloat(input);
+                if(!isNaN(number)){
+                    var square = number*number;
+                    document.getElementById("resultoutput").value=square;
+                }else{
+                    document.getElementById("resultoutput").value="Please enter a valid number";
+                }
+            }
+        </script>
+    </body>
+    </html>
